@@ -27,7 +27,7 @@ class GitHubSearchApp extends React.Component{
     }
 
     searchProfile =(username)=>{
-        let dataURL = `http://api.github.com/users/${username}?clientId=${clientID}&clientSecret=${clientSecret}`;
+        let dataURL = `http://api.github.com/users/${username}`;
         axios.get(dataURL).then((response)=>{
             this.setState({
                 profile : response.data
